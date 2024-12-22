@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from "react-router-dom";
-// import { authContext } from './AuthProvider';
+import { authContext } from './AuthProvider';
+//import { authContext } from './AuthProvider';
 const Navbar = () => {
-//   const {user,singOutUser}=useContext(authContext)
+//   const {user,singOutUser}=useContext(authContext)   
+   //const {user,singOutUser}=useContext(authContext)
+
     const links=<>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/availableFoods'>Available Foods</NavLink></li>
@@ -55,7 +58,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-            <button className='btn'>logout</button>
+            
           {/* {
             user ? 
             <>
