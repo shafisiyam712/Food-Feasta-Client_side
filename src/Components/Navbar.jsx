@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from './AuthProvider';
-//import { authContext } from './AuthProvider';
-const Navbar = () => {
-//   const {user,singOutUser}=useContext(authContext)   
-   //const {user,singOutUser}=useContext(authContext)
+
+const Navbar = () => {  
+   const {user,singOutUser}=useContext(authContext)
 
     const links=<>
     <li><NavLink to='/'>Home</NavLink></li>
@@ -16,16 +15,16 @@ const Navbar = () => {
    
     </>
 
-// const handleSingOut=()=>{
-//   singOutUser();
-//   then((result)=>{
+const handleSingOut=()=>{
+  singOutUser();
+  then((result)=>{
     
-//   })
-//   .catch(error=>{
+  })
+  .catch(error=>{
    
     
-//   })
-// } 
+  })
+} 
     return (
         <div className="navbar bg-[#3069ee]">
         <div className="navbar-start">
@@ -59,7 +58,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
             
-          {/* {
+          {
             user ? 
             <>
             <div><img src={user.photoURL} alt="User Avatar" className="w-12 h-12 rounded-full" title={user.displayName || 'User'} /></div>
@@ -71,7 +70,7 @@ const Navbar = () => {
               <button className="btn w-20  bg-white text-[#1E2A47] hover:bg-[#1E2A47] hover:text-white" ><Link to='/register'>Register</Link></button>
             </>
           
-          } */}
+          }
          
         </div>
       </div>
