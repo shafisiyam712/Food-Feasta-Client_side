@@ -1,9 +1,15 @@
 import React from 'react';
+import Banner from '../Components/Banner';
+import { Outlet } from 'react-router-dom';
+import Header from '../Components/Header';
 
 const Home = () => {
     return (
-        <div className='text-center mt-80'>
-            hiiiiiii
+        <div>
+             <Banner></Banner>
+             <Header></Header>
+            <Outlet></Outlet>
+             
         </div>
     );
 };

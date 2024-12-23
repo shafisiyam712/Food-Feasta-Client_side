@@ -1,18 +1,19 @@
 import React from 'react';
-
+import logo2 from '../assets/logo/icons8-food-donor-100.png'
 const Footer = () => {
     return (
 
-      <div className='bg-[#1E2A47] md:h-96'>
-          <div className="bg-[#1E2A47] mt-10 p-16 flex flex-col md:flex-row">
-        <div className="md:w-2/5 mb-10 md:mb-0">
-          <div className="flex mb-3">
+      <div className='bg-[#c21760] md:h-96'>
+          <div className="bg-[#c21760] mt-5 p-10 flex flex-col md:flex-row">
+        <div className="md:w-2/5 mb-10 md:mb-0 ml-10">
+          <div className="flex  flex-col mb-3">
+            <img className='w-20 h-20 ml-4' src={logo2} alt="" />
             <h1 className="font-extrabold text-2xl text-white">Food Feasta</h1>
           </div>
           <p className="text-white">
             Phone: +8801644898184 <br />
             Email: ShafiSiyam674@gmail.com <br />
-            Dont forget to visit our social sites <br />
+            Dont forget to visit our social sites 
           </p>
           
           <div className="flex gap-2 mt-4">

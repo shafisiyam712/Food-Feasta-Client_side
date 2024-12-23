@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from './AuthProvider';
+import logo from '../assets/logo/logo.png'
 
 const Navbar = () => {  
    const {user,singOutUser}=useContext(authContext)
@@ -24,9 +25,9 @@ const handleSingOut=()=>{
    
     
   })
-} 
+} //bg-[#E75480] #c21760 #db387e
     return (
-        <div className="navbar bg-[#3069ee]">
+        <div className="navbar bg-[#c21760]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +50,12 @@ const handleSingOut=()=>{
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl font-bold text-white">Food Feasta</a>
+          <div className='flex justify-center items-center'>
+            <img className='w-12' src={logo} alt="" />
+          {/* <a className="btn btn-ghost text-xl font-bold text-white">Food Feasta</a> */}
+          <h3 className="text-xl font-bold text-white text-center">Food Feasta</h3>
+          </div>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

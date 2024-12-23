@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { authContext } from '../Components/AuthProvider';
 import Lottie from 'lottie-react';
 import registerLottie from '../assets/Lottie/register.json'
+import Swal from 'sweetalert2'
 const Register = () => {
     const {createUser,manageProfile,singInWithGoogle}=useContext(authContext)
     const [error,setError] = useState("")
@@ -37,7 +38,12 @@ const Register = () => {
             // console.log(result.user);
             manageProfile(name,image)
             // console.log(name,image);
-            
+            Swal.fire({
+              title: 'Success!',
+              text: 'Registration successful!!',
+              icon: 'success',
+              confirmButtonText: 'Ok'
+          });
             navigate('/')
         })
         .catch(ero=>{
@@ -54,6 +60,12 @@ const Register = () => {
         singInWithGoogle()
             .then(result => {
                 // console.log(result.user);
+                Swal.fire({
+                  title: 'Success!',
+                  text: 'Registration successful!!',
+                  icon: 'success',
+                  confirmButtonText: 'Ok'
+              });
                 navigate('/')
                 navigate(location.state.from)
             })
