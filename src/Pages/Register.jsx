@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { authContext } from '../Components/AuthProvider';
+import Lottie from 'lottie-react';
+import registerLottie from '../assets/Lottie/register.json'
 const Register = () => {
     const {createUser,manageProfile,singInWithGoogle}=useContext(authContext)
     const [error,setError] = useState("")
@@ -57,13 +59,17 @@ const Register = () => {
             })
     }
     return (
-        <div className="hero min-h-screen ">
+        <div className="hero min-h-screen flex flex-col md:flex-row-reverse w-11/12 mx-auto justify-center">
+           <div className='w-1/2 md:w-1/3 mt-10 '>
+                <Lottie animationData={registerLottie}></Lottie>
+                
+            </div>
         <div className="hero-content flex-col lg:flex ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register now!</h1>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <form onSubmit={handleRegister}  className="card-body bg-[#1E2A47]">
+            <form onSubmit={handleRegister}  className="card-body ">
 
             <div className="form-control">
                 <label className="label">
@@ -111,7 +117,7 @@ const Register = () => {
                 Already have an account? please <Link to='/login' className="text-blue-500 hover:underline hover:text-white">Login</Link>
               </p>
             </form>
-            <div className="flex gap-1 justify-center items-center bg-[#1E2A47]">
+            <div className="flex gap-1 justify-center items-center ">
                     <FcGoogle className="h-14 w-14 mb-3"></FcGoogle>
                     <button onClick={HandleWithGoogle} className="btn w-40 rounded-full bg-white text-[#1E2A47] hover:bg-[#1E2A47] hover:text-white ">Google Sing In</button>
                     </div>

@@ -5,6 +5,8 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Lottie from 'lottie-react';
+import loginLottie from '../assets/Lottie/login.json'
 const Login = () => {
     const { singInUser, singInWithGoogle } = useContext(authContext)
     const navigate = useNavigate()
@@ -46,13 +48,16 @@ const Login = () => {
     }
 
     return (
-        <div className="hero  min-h-screen">
+        <div className="hero  min-h-screen flex flex-col md:flex-row-reverse w-11/12 mx-auto justify-center">
+            <div className='w-1/2 md:w-1/3 mt-10 '>
+                <Lottie animationData={loginLottie}></Lottie>
+            </div>
             <div className="hero-content flex-col lg:flex">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                 </div>
-                <div className="card w-full max-w-sm shrink-0 shadow-2xl bg-[#1E2A47]">
-                    <form onSubmit={handleLogin} className="card-body bg-[#1E2A47]">
+                <div className="card w-full max-w-sm shrink-0 shadow-2xl ">
+                    <form onSubmit={handleLogin} className="card-body ">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -91,7 +96,7 @@ const Login = () => {
                                 to='/register' className="text-blue-500 hover:underline hover:text-white">Register</Link>
                         </p>
                     </form>
-                    <div className="flex gap-1 justify-center items-center bg-[#1E2A47]">
+                    <div className="flex gap-1 justify-center items-center ">
                     <FcGoogle className="h-14 w-14 mb-3"></FcGoogle>
                     <button onClick={HandleWithGoogle} className="btn w-40 rounded-full bg-white text-[#1E2A47] hover:bg-[#1E2A47] hover:text-white ">Google Sing In</button>
                     </div>
