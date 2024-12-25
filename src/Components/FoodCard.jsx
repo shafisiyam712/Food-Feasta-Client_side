@@ -10,7 +10,7 @@ const FoodCard = ({foods}) => {
              
             <div className='card border border-rounded-xl transition  hover:scale-105 shadow-xl overflow-hidden p-4 mb-2 gap-3'>
             <div className='mb-2  space-y-4 '>
-        <img className='w-full h-60 border rounded-xl' src={FoodImage} alt={`Cover picture of the title`} />
+        <img className='w-full h-60 object-cover border rounded-xl' src={FoodImage} alt={`Cover picture of the title`} />
     </div>  
       <div className='flex gap-2 justify-center'>
       <h4 className='font-extrabold text-xl'>{FoodName}</h4>
