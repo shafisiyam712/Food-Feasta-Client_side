@@ -26,14 +26,14 @@ const routes = createBrowserRouter([
                     {
                         path: '/',
                         element: <Foods></Foods>,
-                        loader: ()=>fetch('http://localhost:5000/foods/top'),
+                        loader: ()=>fetch('https://mileston-11-server-side.vercel.app/foods/top'),
                       },
                 ]
             },
             {
                 path: '/availableFoods',
                 element: <AvailableFoods></AvailableFoods>,
-                loader: ()=>fetch('http://localhost:5000/foods'),
+                loader: ()=>fetch('https://mileston-11-server-side.vercel.app/foods'),
             },
             
             {
@@ -45,7 +45,7 @@ const routes = createBrowserRouter([
                 path: '/foods/:id',
                 element: <PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>,
               
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://mileston-11-server-side.vercel.app/foods/${params.id}`)
             },
           
             {
@@ -59,7 +59,7 @@ const routes = createBrowserRouter([
             {
                 path: '/update/user/:id',
                 element:<PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/user/${params.id}`)
+                loader: ({ params }) => fetch(`https://mileston-11-server-side.vercel.app/foods/user/${params.id}`)
             },
             {
                 path: '/register',

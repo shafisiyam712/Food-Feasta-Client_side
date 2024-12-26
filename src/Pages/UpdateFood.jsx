@@ -14,7 +14,7 @@ const UpdateFood = () => {
 
 
 useEffect(() => {
-    fetch(`http://localhost:5000/foods/user/${id}`) 
+    fetch(`https://mileston-11-server-side.vercel.app/foods/user/${id}`) 
       .then((res) => {
         if (!res.ok) {
           throw new Error('Failed to fetch food data');
@@ -48,7 +48,7 @@ useEffect(() => {
     };
 
     // Send updated food data to the server
-    fetch(`http://localhost:5000/foods/user/${id}`, {
+    fetch(`https://mileston-11-server-side.vercel.app/foods/user/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

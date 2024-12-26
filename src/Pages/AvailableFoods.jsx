@@ -15,7 +15,7 @@ const AvailableFoods = () => {
         setFoodData(sortedData);
     };
     useEffect(() => {
-        fetch(`http://localhost:5000/foods?searchParams=${search}`)
+        fetch(`https://mileston-11-server-side.vercel.app/foods?searchParams=${search}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

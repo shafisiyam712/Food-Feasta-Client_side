@@ -1,15 +1,16 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { authContext } from '../Components/AuthProvider'; 
+//import useAxiosSecure from '../Hooks/useAxiosSecure';
 
 const RequestedFoods = () => {
   const { user } = useContext(authContext); 
   const [requestedFoods, setRequestedFoods] = useState([]);
-  
+  //const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
     if (user) {
       
-      fetch(`http://localhost:5000/foods/request?userEmail=${user.email}`)
+      fetch(`https://mileston-11-server-side.vercel.app/foods/request?userEmail=${user.email}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Failed to fetch requested foods');
@@ -24,6 +25,8 @@ const RequestedFoods = () => {
           console.error('Error fetching requested foods:', error);
           setLoading(false);
         });
+      // axiosSecure.get(`/foods/user?userEmail=${user.email}`)
+      //   .then(res => setRequestedFoods(res.data));
     }
   }, [user]);
 
