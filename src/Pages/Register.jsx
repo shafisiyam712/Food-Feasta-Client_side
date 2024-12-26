@@ -78,7 +78,7 @@ const Register = () => {
             </div>
         <div className="hero-content flex-col lg:flex ">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Register now!</h1>
+            <h1 className="text-[#1E2A47] text-5xl font-bold">Register now!</h1>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleRegister}  className="card-body ">
@@ -126,7 +126,7 @@ const Register = () => {
               <button className='btn font-bold border border-[#1E2A47]  text-[#1E2A47] hover:text-white hover:bg-[#1E2A47]'>Register</button>
               </div>
               <p className='ml-4 mb-4 cursor-pointer'>
-                Already have an account? please <Link to='/login' className="text-blue-500 hover:underline hover:text-white">Login</Link>
+                Already have an account? please <Link to='/login' className="text-blue-500 hover:underline hover:text-[#1E2A47]">Login</Link>
               </p>
             </form>
             <div className="flex gap-1 justify-center items-center ">

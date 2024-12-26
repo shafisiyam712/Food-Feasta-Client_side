@@ -26,8 +26,10 @@ const AvailableFoods = () => {
     return (
         <div className=''>
             <div className="text-center my-14">
-                <h1 className="font-extrabold text-black text-3xl mb-3">Explore Our Vast Collections of Foods</h1>
-                <h2 className='mb-3'>There is a huge collection of foods added by our users and admins.</h2>
+                <h1 className="font-extrabold text-[#1E2A47] text-3xl mb-3">Explore Our Vast Collections of Foods</h1>
+                <h2 className='mb-3'>There is a huge collection of foods added by our users and admins. <br />
+                You can search and sort food according to their Expired date.
+                </h2>
                 <div className='flex  items-center justify-center mt-10'>
                 <div className="w-[450px] mx-auto">
                     <input

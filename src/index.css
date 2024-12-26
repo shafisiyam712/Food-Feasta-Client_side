@@ -5,5 +5,5 @@
 @tailwind utilities;
 body{
   font-family: "Lato", serif;
-  background-color:#FBF8EC;
+  /* background-color:#FBF8EC; */
 }

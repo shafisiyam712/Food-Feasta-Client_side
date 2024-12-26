@@ -58,9 +58,9 @@ const AddFood = () => {
     return (
         <div className='lg:w-3/4 mx-auto'>
         <div className="text-center p-10">
-            <h1 className="text-5xl font-bold">Add Your Food</h1>
+            <h1 className="text-[#1E2A47] text-5xl font-bold">Add Your Food</h1>
             <p className="py-6">
-               Add your movie.Just fill up the form with your movie information.It will up to our website.You can find it All movies section and if it is high rated then you can see it in our home page!!
+               Add your food.Just fill up the form with your food information.It will up to our website.You can find it All movies section and if its quantity is high then you can see it in our home page featured section!!
             </p>
         </div>
         <div className="card bg-base-100 w-full shrink-0 shadow-2xl rounded-xl">
@@ -121,7 +121,7 @@ const AddFood = () => {
                         <span className="label-text text-black">Additional Notes</span>
                     </label>
 
-                    <textarea className='border text-black' name="Notes" id="" cols="30" rows='5'></textarea>
+                    <textarea className='border text-black' name="Notes" id="" cols="30" rows='5' required></textarea>
                 </div>
 
 

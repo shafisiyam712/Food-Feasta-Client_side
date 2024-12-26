@@ -67,7 +67,7 @@ const Login = () => {
             </div>
             <div className="hero-content flex-col lg:flex">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
+                    <h1 className="text-[#1E2A47] text-5xl font-bold">Login now!</h1>
                 </div>
                 <div className="card w-full max-w-sm shrink-0 shadow-2xl ">
                     <form onSubmit={handleLogin} className="card-body ">
@@ -106,7 +106,7 @@ const Login = () => {
                         {error && <p className="text-red-500">{error.message}</p>}
                         <p className='ml-4 mb-4 cursor-pointer'>
                             Don't have an account? please <Link
-                                to='/register' className="text-blue-500 hover:underline hover:text-white">Register</Link>
+                                to='/register' className="text-blue-500 hover:underline hover:text-[#1E2A47]">Register</Link>
                         </p>
                     </form>
                     <div className="flex gap-1 justify-center items-center ">

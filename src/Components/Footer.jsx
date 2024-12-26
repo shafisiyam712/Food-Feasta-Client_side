@@ -58,7 +58,7 @@ const Footer = () => {
             type="text"
           />
           <div>
-            <button className="btn  bg-white text-[#1E2A47] hover:bg-[#BEE3E2] hover:text-white w-52 md:ml-32">Send</button>
+            <button className="btn  bg-white text-[#1E2A47] hover:text-white hover:bg-[#1E2A47] w-52 md:ml-32">Send</button>
           </div>
           
         </div>
