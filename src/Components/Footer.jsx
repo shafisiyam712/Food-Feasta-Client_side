@@ -11,6 +11,7 @@ const Footer = () => {
             <h1 className="font-extrabold text-2xl text-white">Food Feasta</h1>
           </div>
           <p className="text-white">
+            39/2 Muktijoddha sarak,Narayanganj
             Phone: +8801644898184 <br />
             Email: ShafiSiyam674@gmail.com <br />
             Dont forget to visit our social sites 
