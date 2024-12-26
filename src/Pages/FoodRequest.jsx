@@ -31,7 +31,7 @@ const RequestedFoods = () => {
 
   return (
     <div className="w-11/12 mx-auto">
-      <h1 className="text-center text-3xl font-bold mb-8">My Requested Foods</h1>
+      <h1 className="text-center text-3xl font-bold my-8">My Requested Foods</h1>
       {requestedFoods.length === 0 ? (
         <p className="text-center text-xl">No requested foods found.</p>
       ) : (

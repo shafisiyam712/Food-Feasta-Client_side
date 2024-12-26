@@ -69,10 +69,10 @@ const ManageFoods = () => {
 {requestedFoods.length === 0 ? (
         <p className="text-center text-xl">No requested foods found.</p>
       ) : (
-            <div className="overflow-x-auto">
-                <table className="table">
+            <div className="overflow-x-auto mt-3 max-w-full">
+                <table className="table-auto md:table w-full text-sm md:text-base">
                     {/* head */}
-                    <thead>
+                    <thead className="bg-gray-100">
                         <tr>
                             <th>
                             </th>
@@ -114,12 +114,12 @@ const ManageFoods = () => {
                                    
                                     <button
                       onClick={() => handleDelete(food._id)}
-                      className="btn btn-error"
+                      className="btn-xs btn-error md:btn"
                     >
                       <i className="fa-solid fa-trash"></i>
                     </button>
                     <Link  to={`/update/user/${food._id}`}>
-                     <button  className="btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                     <button  className="btn-xs md:btn"><i class="fa-solid fa-pen-to-square"></i></button>
                     </Link>
                    
                                 </th>

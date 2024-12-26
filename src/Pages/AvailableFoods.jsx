@@ -25,11 +25,11 @@ const AvailableFoods = () => {
 
     return (
         <div className=''>
-            <div className="text-center my-14 space-y-2">
+            <div className="text-center my-14">
                 <h1 className="font-extrabold text-black text-3xl mb-3">Explore Our Vast Collections of Foods</h1>
                 <h2 className='mb-3'>There is a huge collection of foods added by our users and admins.</h2>
-                <div className='flex  items-center justify-center'>
-                <div className="w-[400px] mx-auto mb-4">
+                <div className='flex  items-center justify-center mt-10'>
+                <div className="w-[450px] mx-auto">
                     <input
                         onChange={(e) => {
                             console.log("Search Input:", e.target.value); // Debugging
@@ -47,7 +47,7 @@ const AvailableFoods = () => {
                 
             </div>
             <div
-                className={`w-11/12 mx-auto grid ${
+                className={`w-11/12  pl-7 mx-auto grid ${
                     isTwoColumn ? "grid-cols-1 md:grid-cols-1 lg:grid-cols-2" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 } gap-2 mt-10`}
             >
@@ -55,10 +55,10 @@ const AvailableFoods = () => {
                     <FoodCard key={foods._id} foods={foods}></FoodCard>
                 ))}
             </div>
-            <div className="w-2/3 md:w-1/5 mx-auto mt-10">
+            <div className="w-36 mx-auto mt-10 pl-2">
                 <button
                     onClick={() => setIsTwoColumn(!isTwoColumn)} // Toggle layout on button click
-                    className="btn font-bold border border-[#1E2A47] rounded-full text-[#1E2A47] md:w-1/2 hover:text-white hover:bg-[#1E2A47]"
+                    className="btn font-bold border border-[#1E2A47] rounded-full text-[#1E2A47]  hover:text-white hover:bg-[#1E2A47]"
                 >
                     {/* {isTwoColumn ? "Switch to 3-Column" : "Switch to 2-Column"} */}
                     Change Layout
