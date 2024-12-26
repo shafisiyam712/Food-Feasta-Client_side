@@ -26,7 +26,7 @@ const AddFood = () => {
         const ExpiredDate = e.target.ExDate.value;
         const Notes = e.target.Notes.value;
 
-        //const urlRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(:\d+)?(\/[^\s]*)?$/i;
+        
         const newFood = { FoodName, FoodImage, FoodQuantity, PickUpLocation, ExpiredDate, Notes,userEmail,userName,userPhoto,status}
         console.log(newFood)
 

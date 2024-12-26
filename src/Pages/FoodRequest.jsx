@@ -1,40 +1,37 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { authContext } from '../Components/AuthProvider'; // Assuming your auth context provides the user data
+import { authContext } from '../Components/AuthProvider'; 
 
 const RequestedFoods = () => {
-  const {user} = useContext(authContext); // Get logged-in user's information
+  const { user } = useContext(authContext); 
   const [requestedFoods, setRequestedFoods] = useState([]);
-  const [loading, setLoading] = useState(true);
-console.log(user);
+  
 
   useEffect(() => {
     if (user) {
-      // Make GET request with the logged-in user's email
+      
       fetch(`http://localhost:5000/foods/request?userEmail=${user.email}`)
         .then((res) => {
           if (!res.ok) {
-            throw new Error("Failed to fetch requested foods");
+            throw new Error('Failed to fetch requested foods');
           }
           return res.json();
         })
         .then((data) => {
-          setRequestedFoods(data);
-          setLoading(false);
+          setRequestedFoods(data); 
+          
         })
         .catch((error) => {
-          console.error("Error fetching requested foods:", error);
+          console.error('Error fetching requested foods:', error);
           setLoading(false);
         });
     }
-  }, [user]); // Dependency on user, reload when the user changes
+  }, [user]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  
 
   return (
     <div className="w-11/12 mx-auto">
-      <h1 className="text-center text-3xl font-bold mb-8">Requested Foods</h1>
+      <h1 className="text-center text-3xl font-bold mb-8">My Requested Foods</h1>
       {requestedFoods.length === 0 ? (
         <p className="text-center text-xl">No requested foods found.</p>
       ) : (
@@ -44,13 +41,13 @@ console.log(user);
               <img
                 src={food.FoodImage}
                 alt={food.FoodName}
-                className="w-full h-40 object-cover mb-4 rounded"
+                className="w-full h-48 object-cover rounded-md mb-4"
               />
-              <h2 className="text-xl font-semibold">{food.FoodName}</h2>
-              <p>Pick-Up Location: {food.PickUpLocation}</p>
-              <p>Expired Date: {food.ExpiredDate}</p>
-              <p>Donator: {food.userName}</p>
-              <p>Donator Email: {food.userEmail}</p>
+              <h2 className="text-xl font-semibold mb-2">{food.FoodName}</h2>
+              <p><strong>Donor Name:</strong> {food.donatorName}</p>
+              <p><strong>Pickup Location:</strong> {food.PickUpLocation}</p>
+              <p><strong>Expire Date:</strong> {food.ExpiredDate}</p>
+              <p><strong>Request Date:</strong> {new Date(food.requestDate).toLocaleDateString()}</p>
             </div>
           ))}
         </div>
@@ -58,5 +55,6 @@ console.log(user);
     </div>
   );
 };
+
 
 export default RequestedFoods;

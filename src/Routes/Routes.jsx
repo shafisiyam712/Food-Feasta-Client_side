@@ -57,9 +57,9 @@ const routes = createBrowserRouter([
                 element:<PrivateRoute><FoodRequest></FoodRequest></PrivateRoute>,
             },
             {
-                path: '/update/:id',
+                path: '/update/user/:id',
                 element:<PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/foods/user/${params.id}`)
             },
             {
                 path: '/register',

@@ -1,54 +1,3 @@
-// import React, { useContext } from 'react';
-// import { useEffect, useState } from "react";
-// import { Link, useLoaderData, useParams } from "react-router-dom";
-// import { useNavigate } from 'react-router-dom';
-// import Swal from 'sweetalert2';
-// import { authContext } from '../Components/AuthProvider';
-
-
-// const FoodDetails = () => {
-//     const data=useLoaderData();
-//     const {_id,FoodName, FoodImage, FoodQuantity, PickUpLocation, ExpiredDate, Notes,userEmail,userName,userPhoto,status}= data || {}
-//     return (
-//         <div className="w-11/12 mx-auto">
-             
-//         <div className='card w-2/3 mx-auto mt-10 border border-rounded-xl shadow-xl overflow-hidden p-4 mb-2 gap-3'>
-//         <div className='mb-2  space-y-4 '>
-//     <img className='w-full h-60 border rounded-xl' src={FoodImage} alt={`Cover picture of the title`} />
-// </div>  
-//   <div className='flex gap-2 justify-center'>
-//   <h4 className='font-extrabold text-xl text-center'>Movie Title: {FoodName}</h4>
-//   </div>
-  
-
-//         <div className='mt-4 flex flex-col gap-3 mb-2 text-center'>
-       
-//             <h5 className='font-bold mt-2'>Food Quantity: {FoodQuantity}</h5>
-//             <h5 className='font-bold mt-2'>Pick Up Location: {PickUpLocation}</h5>
-//             <h5 className='font-bold mt-2'>Expired Date: {ExpiredDate}</h5>
-//             <h5 className='font-bold mt-2'>Summary : {Notes}</h5>
-            
-//             <div className='flex flex-col text-center items-center'>
-//             <h5 className='font-bold mt-2'>Added By : {userName}</h5>
-//             <img className='w-10 h-10 rounded-full mt-2' src={userPhoto} alt="" />
-//             <h5 className='font-bold mt-2'>User Email : {userEmail}</h5>
-//             </div>
-
-//         </div>
-//     </div>
-//     <div className='flex justify-center gap-2 md:gap-5 mt-10'>
-       
-      
-//                      <button className='btn font-bold border border-[#1E2A47] rounded-full text-[#1E2A47] w-28 md:w-40 hover:text-white hover:bg-[#1E2A47]'>Request</button>
-               
-//        </div>
-       
-
-//     </div>
-//     );
-// };
-
-// export default FoodDetails;
 
 import React, { useState, useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
@@ -60,10 +9,12 @@ const FoodDetails = () => {
   const { user } = useContext(authContext);
   const navigate = useNavigate();
 
-  const [isModalOpen, setModalOpen] = useState(false); // Modal state
+  const [isModalOpen, setModalOpen] = useState(false); 
   const { _id, FoodName, FoodImage, FoodQuantity, PickUpLocation, ExpiredDate, Notes, userEmail, userName,userPhoto ,status } = data || {};
 
-  // Handle Request Submission
+  
+
+
   const handleRequest = () => {
     const requestData = {
       foodId: _id,
@@ -75,10 +26,8 @@ const FoodDetails = () => {
       donatorEmail: userEmail,
       donatorName: userName,
       requesterEmail: user?.email,
-      requestDate: new Date().toISOString(),
     };
-
-    // Update food status and send request data to the server
+  
     fetch(`http://localhost:5000/foods/request`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -88,12 +37,13 @@ const FoodDetails = () => {
       .then((response) => {
         if (response.success) {
           Swal.fire("Success!", "Food requested successfully!", "success");
-          navigate("/availableFoods"); // Navigate back to available foods
+          navigate("/availableFoods"); 
         } else {
           Swal.fire("Error!", "Failed to request food.", "error");
         }
       });
   };
+  
 
   return (
     <div className="w-11/12 mx-auto">
