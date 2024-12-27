@@ -4,35 +4,36 @@ import { authContext } from '../Components/AuthProvider';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-//import useAxiosSecure from '../Hooks/useAxiosSecure';
+import useAxiosSecure from '../Hooks/useAxiosSecure';
 const ManageFoods = () => {
     const { user } = useContext(authContext); 
       const [requestedFoods, setRequestedFoods] = useState([]);
-      //const axiosSecure = useAxiosSecure();
+      const axiosSecure = useAxiosSecure();
       useEffect(() => {
           if (user) {
-            fetch(`https://mileston-11-server-side.vercel.app/foods/user?userEmail=${user.email}`)
-              .then((res) => {
-                if (!res.ok) {
-                  throw new Error('Failed to fetch requested foods');
-                }
-                return res.json();
-              })
-              .then((data) => {
-                console.log(data);
-                setRequestedFoods(data); 
-              })
-              .catch((error) => {
-                console.error('Error fetching requested foods:', error);
-              });
+            // fetch(`https://mileston-11-server-side.vercel.app/foods/user?userEmail=${user.email}`)
+            //   .then((res) => {
+            //     if (!res.ok) {
+            //       throw new Error('Failed to fetch requested foods');
+            //     }
+            //     return res.json();
+            //   })
+            //   .then((data) => {
+            //     console.log(data);
+            //     setRequestedFoods(data); 
+            //   })
+            //   .catch((error) => {
+            //     console.error('Error fetching requested foods:', error);
+            //   });
+
         //     axios.get(`https://mileston-11-server-side.vercel.app/foods/user?userEmail=${user.email}`, {
         //     withCredentials: true
         // })
         //     .then(res => setRequestedFoods(res.data))
         //   }
 
-        // axiosSecure.get(`/foods/user?userEmail=${user.email}`)
-        // .then(res => setRequestedFoods(res.data));
+        axiosSecure.get(`/foods/user?userEmail=${user.email}`)
+        .then(res => setRequestedFoods(res.data));
 }
         
         }, [user]);
@@ -49,7 +50,7 @@ const ManageFoods = () => {
             }).then((result) => {
               if (result.isConfirmed) {
                 // Perform the DELETE request
-                fetch(`https://mileston-11-server-side.vercel.app/foods/user/${foodId}`, {
+                fetch(`https://mileston-11-server-side.vercel.app/foods/${foodId}`, {
                   method: 'DELETE',
                 })
                   .then((res) => res.json())

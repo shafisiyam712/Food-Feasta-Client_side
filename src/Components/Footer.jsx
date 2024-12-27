@@ -11,10 +11,10 @@ const Footer = () => {
             <h1 className="font-extrabold text-2xl text-white">Food Feasta</h1>
           </div>
           <p className="text-white">
-            39/2 Muktijoddha sarak,Narayanganj
+            39/2 Muktijoddha sarak,Narayanganj <br />
             Phone: +8801644898184 <br />
             Email: ShafiSiyam674@gmail.com <br />
-            Dont forget to visit our social sites 
+            {/* Dont forget to visit our social sites  */}
           </p>
           
           <div className="flex gap-2 mt-4">

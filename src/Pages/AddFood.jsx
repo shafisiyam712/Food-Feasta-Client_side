@@ -44,7 +44,7 @@ const AddFood = () => {
                     console.log('successfully added');
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Your movie added successfully',
+                        text: 'Your food added successfully',
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     });
@@ -107,13 +107,7 @@ const AddFood = () => {
                         <input type='date' name='ExDate' placeholder="Expired Date" className="input input-bordered text-black" required />
 
                     </div>
-                    {/* <div className="form-control flex-1">
-                        <label className="label">
-                            <span className="label-text text-white">Rating</span>
-                        </label>
-                        <input type='text' name='rating' placeholder="Rating" className="input input-bordered text-black" required />
-
-                    </div> */}
+                  
                 </div>
                 <br />
                 <div className="form-control">

@@ -1,5 +1,3 @@
-/* eslint-disable no-nonoctal-decimal-escape */
-
 import { Link } from "react-router-dom";
 
 

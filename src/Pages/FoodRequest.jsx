@@ -1,36 +1,41 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { authContext } from '../Components/AuthProvider'; 
-//import useAxiosSecure from '../Hooks/useAxiosSecure';
+import useAxiosSecure from '../Hooks/useAxiosSecure';
 
 const RequestedFoods = () => {
   const { user } = useContext(authContext); 
   const [requestedFoods, setRequestedFoods] = useState([]);
-  //const axiosSecure = useAxiosSecure();
+const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
     if (user) {
       
-      fetch(`https://mileston-11-server-side.vercel.app/foods/request?userEmail=${user.email}`)
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error('Failed to fetch requested foods');
-          }
-          return res.json();
-        })
-        .then((data) => {
-          setRequestedFoods(data); 
+      // fetch(`https://mileston-11-server-side.vercel.app/foods/request?userEmail=${user.email}`)
+      //   .then((res) => {
+      //     if (!res.ok) {
+      //       throw new Error('Failed to fetch requested foods');
+      //     }
+      //     return res.json();
+      //   })
+      //   .then((data) => {
+      //     setRequestedFoods(data); 
           
-        })
-        .catch((error) => {
-          console.error('Error fetching requested foods:', error);
-          setLoading(false);
-        });
-      // axiosSecure.get(`/foods/user?userEmail=${user.email}`)
-      //   .then(res => setRequestedFoods(res.data));
-    }
+      //   })
+      //   .catch((error) => {
+      //     console.error('Error fetching requested foods:', error);
+      //     setLoading(false);
+      //   });
+        
+      axiosSecure.get(`/foods/request?userEmail=${user.email}`)
+        .then(res => setRequestedFoods(res.data));
+       
+        
+        
+
+     }
   }, [user]);
 
-  
+  console.log(requestedFoods);
 
   return (
     <div className="w-11/12 mx-auto">
