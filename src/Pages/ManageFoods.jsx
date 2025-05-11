@@ -82,7 +82,7 @@ const ManageFoods = () => {
 {requestedFoods.length === 0 ? (
         <p className="text-center text-xl my-10">Opps!!..No requested foods found.</p>
       ) : (
-            <div className="overflow-x-auto mt-8 max-w-full">
+            <div className="overflow-x-auto my-10 max-w-full">
                 <table className="table-auto md:table w-full text-sm md:text-base">
                     {/* head */}
                     <thead className="bg-gray-100">

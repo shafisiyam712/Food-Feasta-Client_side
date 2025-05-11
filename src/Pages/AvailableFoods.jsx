@@ -30,7 +30,7 @@ const AvailableFoods = () => {
                 <h2 className='mb-3'>There is a huge collection of foods added by our users and admins. <br />
                 You can search and sort food according to their Expired date.
                 </h2>
-                <div className='flex  items-center justify-center mt-10'>
+                <div className='flex  items-center justify-center mt-20'>
                 <div className="w-[450px] mx-auto">
                     <input
                         onChange={(e) => {
