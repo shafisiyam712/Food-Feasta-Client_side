@@ -45,7 +45,7 @@ const axiosSecure = useAxiosSecure();
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {requestedFoods.map((food) => (
-            <div key={food._id} className="border rounded-lg p-4 shadow-md">
+            <div key={food._id} className="card border border-rounded-xl transition  hover:scale-105 shadow-xl overflow-hidden p-4 mb-2 gap-3">
               <img
                 src={food.FoodImage}
                 alt={food.FoodName}

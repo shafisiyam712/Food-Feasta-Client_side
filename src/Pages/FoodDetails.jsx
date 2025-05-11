@@ -41,7 +41,8 @@ const FoodDetails = () => {
 
   return (
     <div className="w-11/12 mx-auto">
-      <div className="card w-2/3 mx-auto mt-10 border border-rounded-xl shadow-xl overflow-hidden p-4 mb-2 gap-3">
+      <div className="card w-2/3 mx-auto mt-10  border border-rounded-xl transition  hover:scale-105 shadow-xl overflow-hidden p-4 mb-2 gap-3">
+      {/* <div className="card w-2/3 mx-auto mt-10 border border-rounded-xl shadow-xl overflow-hidden p-4 mb-2 gap-3"> */}
         <div className="mb-2 space-y-4">
           <img className="w-full h-60 object-cover border rounded-xl" src={FoodImage} alt={`Cover picture of the title`} />
         </div>
@@ -75,7 +76,7 @@ const FoodDetails = () => {
 
       
       <dialog id="request_modal" className="modal">
-        <div className="modal-box text-center items-center">
+        <div className="modal-box text-center items-center dark:bg-[#1E2A47]">
           <h2 className="text-xl font-bold mb-4">Request Food</h2>
           <div className="space-y-2">
             <p><strong>Food Name:</strong> {FoodName}</p>
