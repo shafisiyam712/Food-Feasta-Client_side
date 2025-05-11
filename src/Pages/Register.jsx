@@ -78,35 +78,35 @@ const Register = () => {
             </div>
         <div className="hero-content flex-col lg:flex ">
           <div className="text-center lg:text-left">
-            <h1 className="text-[#1E2A47] text-5xl font-bold">Register now!</h1>
+            <h1 className="text-[#1E2A47] dark:text-white text-5xl font-bold">Register now!</h1>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card bg-base-100 dark:bg-[#1E2A47] w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleRegister}  className="card-body ">
 
             <div className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">Name</span>
+                  <span className="label-text text-[#1E2A47] dark:text-white">Name</span>
                 </label>
                 <input type="text" name='name' placeholder="Name" className="input input-bordered text-black" required />
               </div>   
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text  text-white">Email</span>
+                  <span className="label-text text-[#1E2A47] dark:text-white">Email</span>
                 </label>
                 <input type="email" name='email' placeholder="email" className="input input-bordered  text-black" required />
               </div>
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text  text-white">Photo-Url</span>
+                  <span className="label-text text-[#1E2A47] dark:text-white">Photo-Url</span>
                 </label>
                 <input type="text" name='image' placeholder="url" className="input input-bordered  text-black" required />
               </div>
 
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text  text-white">Password</span>
+                  <span className="label-text  text-[#1E2A47] dark:text-white">Password</span>
                 </label>
                 <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered text-black" required />
 
@@ -125,7 +125,7 @@ const Register = () => {
               <div className="form-control mt-6">
               <button className='btn font-bold border border-[#1E2A47]  text-[#1E2A47] hover:text-white hover:bg-[#1E2A47]'>Register</button>
               </div>
-              <p className='ml-4 mb-4 cursor-pointer'>
+              <p className='ml-4 mb-4 cursor-pointer text-[#1E2A47] dark:text-white'>
                 Already have an account? please <Link to='/login' className="text-blue-500 hover:underline hover:text-[#1E2A47]">Login</Link>
               </p>
             </form>

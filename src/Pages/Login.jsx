@@ -67,20 +67,20 @@ const Login = () => {
             </div>
             <div className="hero-content flex-col lg:flex">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-[#1E2A47] text-5xl font-bold">Login now!</h1>
+                    <h1 className="text-[#1E2A47] dark:text-white text-5xl font-bold">Login now!</h1>
                 </div>
-                <div className="card w-full max-w-sm shrink-0 shadow-2xl ">
+                <div className="card w-full max-w-sm shrink-0 shadow-2xl dark:bg-[#1E2A47]">
                     <form onSubmit={handleLogin} className="card-body ">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text dark:text-white">Email</span>
                             </label>
                             <input type="email" name='email' ref={emailRef} placeholder="email" className="input input-bordered text-black" required />
                         </div>
 
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text dark:text-white">Password</span>
                             </label>
                             <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered text-black" required />
 

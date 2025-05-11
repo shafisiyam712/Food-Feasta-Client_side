@@ -90,13 +90,13 @@ useEffect(() => {
           Update the information of your food donation. After submission, the updated details will be reflected on the website.
         </p>
       </div>
-      <div className="card bg-base-100 w-full shrink-0 shadow-2xl rounded-xl">
+      <div className="card bg-base-100  dark:bg-[#1E2A47] w-full shrink-0 shadow-2xl rounded-xl">
         <form onSubmit={handleUPfood} className="card-body rounded-xl">
           {/* Form First Row */}
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-black">Food Name</span>
+                <span className="label-text text-black dark:text-white">Food Name</span>
               </label>
               <input
                 type="text"
@@ -109,7 +109,7 @@ useEffect(() => {
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-black">Food Image</span>
+                <span className="label-text text-black dark:text-white">Food Image</span>
               </label>
               <input
                 type="url"
@@ -125,7 +125,7 @@ useEffect(() => {
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-black">Food Quantity</span>
+                <span className="label-text text-black dark:text-white">Food Quantity</span>
               </label>
               <input
                 type="number"
@@ -138,7 +138,7 @@ useEffect(() => {
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-black">Pickup Location</span>
+                <span className="label-text text-black dark:text-white">Pickup Location</span>
               </label>
               <input
                 type="text"
@@ -154,7 +154,7 @@ useEffect(() => {
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-black">Expired Date</span>
+                <span className="label-text text-black dark:text-white">Expired Date</span>
               </label>
               <input
                 type="date"
@@ -169,7 +169,7 @@ useEffect(() => {
           <br />
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-black">Additional Notes</span>
+              <span className="label-text text-black dark:text-white">Additional Notes</span>
             </label>
             <textarea
               className="textarea textarea-bordered text-black"

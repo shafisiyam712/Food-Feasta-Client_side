@@ -58,25 +58,25 @@ const AddFood = () => {
     return (
         <div className='lg:w-3/4 mx-auto'>
         <div className="text-center p-10">
-            <h1 className="text-[#1E2A47] text-5xl font-bold">Add Your Food</h1>
+            <h1 className="text-[#1E2A47] dark:text-white text-5xl font-bold">Add Your Food</h1>
             <p className="py-6">
                Add your food.Just fill up the form with your food information.It will up to our website.You can find it All movies section and if its quantity is high then you can see it in our home page featured section!!
             </p>
         </div>
-        <div className="card bg-base-100 w-full shrink-0 shadow-2xl rounded-xl">
+        <div className="card bg-base-100  dark:bg-[#1E2A47] w-full shrink-0 shadow-2xl rounded-xl">
             <form onSubmit={handleAddfood} className="card-body  rounded-xl">
                 {/* form first row */}
                 <div className='flex flex-col lg:flex-row gap-5'>
                     <div className="form-control flex-1">
                         <label className="label">
-                            <span className="label-text text-black">Food Name</span>
+                            <span className="label-text text-black dark:text-white">Food Name</span>
                         </label>
                         <input type="text" name='FoodName' placeholder="Food Name" className="input input-bordered text-black" required />
 
                     </div>
                     <div className="form-control flex-1">
                         <label className="label">
-                            <span className="label-text text-black">Food Image</span>
+                            <span className="label-text text-black dark:text-white">Food Image</span>
                         </label>
                         <input type='url' name='FoodImg' placeholder="Photo Url" className="input input-bordered text-black" required />
                     </div>
@@ -87,13 +87,13 @@ const AddFood = () => {
 
                     <div className="form-control flex-1">
                         <label className="label">
-                            <span className="label-text text-black">Food Quantity</span>
+                            <span className="label-text text-black dark:text-white">Food Quantity</span>
                         </label>
                         <input type="number" name='FoodQuantity' placeholder="Food Quantity" className="input input-bordered text-black" required />
                     </div>
                     <div className="form-control flex-1">
                         <label className="label">
-                            <span className="label-text text-black">Pickup Location</span>
+                            <span className="label-text text-black dark:text-white">Pickup Location</span>
                         </label>
                         <input type="text" name='location' placeholder="pickup location" className="input input-bordered text-black" required />
                     </div>
@@ -102,7 +102,7 @@ const AddFood = () => {
                 <div className='flex flex-col lg:flex-row gap-5'>
                 <div className="form-control flex-1">
                         <label className="label">
-                            <span className="label-text text-black">Expired Date</span>
+                            <span className="label-text text-black dark:text-white">Expired Date</span>
                         </label>
                         <input type='date' name='ExDate' placeholder="Expired Date" className="input input-bordered text-black" required />
 
@@ -112,7 +112,7 @@ const AddFood = () => {
                 <br />
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Additional Notes</span>
+                        <span className="label-text text-black dark:text-white">Additional Notes</span>
                     </label>
 
                     <textarea className='border text-black' name="Notes" id="" cols="30" rows='5' required></textarea>
