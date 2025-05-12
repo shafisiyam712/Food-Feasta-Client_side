@@ -58,7 +58,7 @@ const AddFood = () => {
     return (
         <div className='lg:w-3/4 mx-auto'>
         <div className="text-center p-10">
-            <h1 className="text-[#1E2A47] dark:text-white text-5xl font-bold">Add Your Food</h1>
+            <h1 className="text-[#1E2A47] dark:text-white text-3xl font-extrabold">Add Your Food</h1>
             <p className="py-6">
                Add your food.Just fill up the form with your food information.It will up to our website.You can find it All movies section and if its quantity is high then you can see it in our home page featured section!!
             </p>

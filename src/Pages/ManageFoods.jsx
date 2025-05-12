@@ -78,7 +78,7 @@ const ManageFoods = () => {
 
     return (
         <div className="w-11/12 mx-auto">
-<h2 className="text-3xl text-center mt-8 text-[#1E2A47] font-bold dark:text-white">My Added Foods: {requestedFoods.length}</h2>
+<h2 className="text-3xl text-center mt-8 text-[#1E2A47] font-extrabold dark:text-white">My Added Foods: {requestedFoods.length}</h2>
 {requestedFoods.length === 0 ? (
         <p className="text-center text-xl my-10">Opps!!..No requested foods found.</p>
       ) : (

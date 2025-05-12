@@ -2,7 +2,6 @@ import React from 'react';
 import { useContext, useRef, useState } from "react";
 import { authContext } from "../Components/AuthProvider";
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
-
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Lottie from 'lottie-react';

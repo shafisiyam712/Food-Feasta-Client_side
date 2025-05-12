@@ -85,7 +85,7 @@ useEffect(() => {
   return (
     <div className="lg:w-3/4 mx-auto">
       <div className="text-center p-10">
-        <h1 className="text-5xl font-bold">Update Your Food</h1>
+        <h1 className="text-3xl font-extrabold">Update Your Food</h1>
         <p className="py-6">
           Update the information of your food donation. After submission, the updated details will be reflected on the website.
         </p>

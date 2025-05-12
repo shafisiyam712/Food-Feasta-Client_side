@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
     return (
         <div className="w-11/12 mx-auto my-20">
-            <h1 className="text-center font-bold text-3xl text-[#1E2A47] dark:text-white">Reed Health and Fitness blogs</h1>
+            <h1 className="text-center font-extrabold text-3xl text-[#1E2A47] dark:text-white">Reed Health and Fitness blogs</h1>
             <p className="text-center mt-3">Check out experts thoughts and suggestions about health and fitness</p>
             <div className="w-11/12 mx-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2 mt-20">
                 <div className='card border border-rounded-xl transition  hover:scale-105 shadow-xl overflow-hidden p-4 mb-2 gap-3'>

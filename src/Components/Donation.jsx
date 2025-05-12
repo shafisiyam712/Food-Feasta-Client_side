@@ -2,7 +2,7 @@
 const Donation = () => {
     return (
         <div className="w-11/12 mx-auto mt-16">
-            <h1 className="text-center font-bold text-3xl text-[#1E2A47] dark:text-white">Our Previous Donation</h1>
+            <h1 className="text-center font-bold text-3xl text-[#1E2A47] dark:text-white font-extrabold">Our Previous Donation</h1>
             <p className="text-center mt-3">We collaborate with different NGO's and others welfare trust and send your food to them.Here are some of them in the last few months. <br />If you like to join our this programme you can send your food to us and we make sure to send it safely </p>
              <div className="w-11/12 mx-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2 mt-20">
                <div className='card border border-rounded-xl transition  hover:scale-105 shadow-xl overflow-hidden p-4 mb-2 gap-3'>

@@ -54,8 +54,8 @@ const Footer = () => {
             <h3 className="text-white md:ml-12 text-lg">Drop a Message</h3>
           </div>
           <input
-            className="bg-slate-600 text-white my-5 rounded-md h-10 w-52 border-none md:ml-32 p-3"
-            placeholder="Enter your Email"
+            className=" text-black my-5 rounded-md h-10 w-52 border-none md:ml-32 p-3"
+            placeholder="Enter your message"
             type="text"
           />
           <div>
@@ -66,7 +66,7 @@ const Footer = () => {
         
       </div>
        <hr />
-      <h3 className="text-white text-lg text-center">Copyright@2024</h3>
+      <h3 className="text-white text-lg text-center">Copyright@2025</h3>
       </div>
         
     )
