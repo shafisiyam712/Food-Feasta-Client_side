@@ -1,5 +1,6 @@
 import React from 'react';
 import logo2 from '../assets/logo/icons8-food-donor-100.png'
+import { FaSquareXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
 
@@ -23,7 +24,8 @@ const Footer = () => {
     <img src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" alt="Facebook" />
   </a>
   <a href="https://x.com/SiyamShafi7025" target="_blank" rel="noopener noreferrer">
-    <i className="fa-brands fa-twitter text-white text-3xl mt-2"></i>
+    {/* <i className="fa-brands fa-twitter text-white text-3xl mt-2"></i> */}
+    <FaSquareXTwitter size={48} className="text-white" />
   </a>
   <a href="https://www.youtube.com/@NadirOnTheGoBangla" target="_blank" rel="noopener noreferrer">
     <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="LinkedIn" />
